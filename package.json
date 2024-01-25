@@ -1,0 +1,12 @@
+{
+  "name": "@anio-js-core-foundation/create-async-mutex",
+  "version": "1.0.0",
+  "description": "Create a mutex.",
+  "main": "index.mjs",
+  "author": "Anio Software <info@anio-software.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anio-js-core-foundation/create-async-mutex.git"
+  }
+}
