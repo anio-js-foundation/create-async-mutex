@@ -1,6 +1,6 @@
 {
   "name": "@anio-js-core-foundation/create-async-mutex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a mutex.",
   "main": "index.mjs",
   "author": "Anio Software <info@anio.software>",
