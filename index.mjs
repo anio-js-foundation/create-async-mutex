@@ -1,22 +1,28 @@
 export default function createAsyncMutex() {
-	let current_promise = null
+	let queue = []
+
+	const releaseNext = () => {
+		if (!queue.length) {
+			return
+		}
+
+		const resolve = queue.shift()
+
+		setTimeout(resolve, 0, () => {
+			releaseNext()
+		})
+	}
 
 	return {
-		async acquire() {
-			if (current_promise !== null) {
-				await current_promise
-			}
+		acquire() {
+			return new Promise((resolve) => {
+				queue.push(resolve)
 
-			let unlock
-
-			current_promise = new Promise(resolve => {
-				unlock = resolve
+				// Resolve immediately if queue was empty
+				if (queue.length === 1) {
+					setTimeout(releaseNext, 0)
+				}
 			})
-
-			return () => {
-				unlock()
-				current_promise = null
-			}
 		}
 	}
 }
