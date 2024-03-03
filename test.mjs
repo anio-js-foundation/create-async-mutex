@@ -1,4 +1,4 @@
-import createAsyncMutex from "./index.mjs"
+import createAsyncMutex from "./src/index.mjs"
 
 const mutex = createAsyncMutex()
 

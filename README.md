@@ -1,9 +1,9 @@
-# @anio-js-core-foundation/create-async-mutex
+# @anio-js-foundation/create-async-mutex
 
 Creates a mutex.
 
 ```js
-import createAsyncMutex from "@anio-js-core-foundation/create-async-mutex"
+import createAsyncMutex from "@anio-js-foundation/create-async-mutex"
 
 const mutex = createAsyncMutex()
 
